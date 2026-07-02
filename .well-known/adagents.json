@@ -1,0 +1,159 @@
+{
+  "$schema": "https://adcontextprotocol.org/schemas/v3/adagents.json",
+  "last_updated": "2026-06-26",
+  "contact": {
+    "name": "Above Data Signals",
+    "email": "bnash@abovedata.io",
+    "domain": "abovedata.io"
+  },
+  "authorized_agents": [
+    {
+      "url": "https://above-data-signals-agent.fly.dev/mcp/",
+      "authorized_for": "All Above Data signals",
+      "authorization_type": "open"
+    }
+  ],
+  "signal_tags": {
+    "retail": {
+      "name": "Retail & Shopper",
+      "description": "In-store and online retail purchase behavior, shopper segments, and CPG buyers"
+    },
+    "auto": {
+      "name": "Automotive",
+      "description": "Vehicle ownership, purchase intent, and auto service signals"
+    },
+    "b2b": {
+      "name": "B2B & Professional",
+      "description": "Business decision-makers, industry verticals, and professional audiences"
+    },
+    "demographics": {
+      "name": "Demographics & Lifestyle",
+      "description": "Age, income, household composition, and lifestyle segments"
+    },
+    "financial": {
+      "name": "Financial Services",
+      "description": "Banking, investing, insurance, and credit behavior signals"
+    },
+    "health": {
+      "name": "Health & Wellness",
+      "description": "Healthcare professionals, patient segments, and wellness behaviors"
+    },
+    "travel": {
+      "name": "Travel",
+      "description": "Domestic and international travel intent and behavior"
+    },
+    "real_estate": {
+      "name": "Real Estate",
+      "description": "Home buyers, renters, home improvement, and property signals"
+    },
+    "education": {
+      "name": "Education",
+      "description": "Alumni networks, student segments, and educational institution affiliations"
+    },
+    "political": {
+      "name": "Political & Civic",
+      "description": "Voter registration, political affiliation, and civic engagement signals"
+    },
+    "sports": {
+      "name": "Sports & Entertainment",
+      "description": "Sports fans, event attendance, and entertainment interests"
+    },
+    "interests": {
+      "name": "Interests & Hobbies",
+      "description": "Consumer interest and affinity segments across lifestyle categories"
+    }
+  },
+  "signals": [
+    {
+      "id": "polk_auto",
+      "name": "Polk Automotive Solutions",
+      "value_type": "binary",
+      "description": "Polk Automotive Solutions (S&P Global Mobility) | Category: automotive audience data, vehicle registration intelligence, deterministic identity, purchase signal data | Scale: census-level (not sampled) coverage of 127M U.S. households, 280M+ vehicles in operation, 97% of U.S./Canada vehicle sales, 30 years historical depth, 2000+ pre-built segments including 200+ EV/hybrid | Freshness: daily-refreshed transaction signals tracking in-market intent, lease expiration, conquest events, trade-in triggers | Depth: vehicle make/model/trim/fuel type/engine/model year, owner demographics, lease vs finance status, service history, lifecycle stage (consideration > purchase > ownership > trade-in), national + subnational geo | Signal strength: deterministic (not probabilistic/modeled), sourced from government motor vehicle registrations + OEM + point-of-sale dealer records, DPPA-compliant, cookieless, privacy-safe | Products: Polk Audiences (pre-built + custom segments, available on DSPs, LiveRamp, Eyeota, Peer39, Madhive CTV), Polk Signals (daily event feeds for CDP/DMP), Polk Data Services (first-party CRM enrichment, database append) | Use cases: automotive targeting, competitive conquest, CRM enrichment, VIO market share, EV adoption tracking, CTV/programmatic activation, dealer marketing | Differentiator: only provider combining full census registration history with real-time purchase signals; 100+ year data lineage; deterministic identity; cross-channel activation",
+      "tags": ["auto"]
+    },
+    {
+      "id": "alliant_insights",
+      "name": "Alliant Insights",
+      "value_type": "binary",
+      "description": "Alliant | (Formerly Analytics IQ) Category: cooperative transactional audience data, purchase-based behavioral signals, cognitive psychology-informed consumer intelligence, people-based marketing data | Scale: billions of consumer transactions; 5,000+ syndicated audience segments (2,900+ purchase-based via Alliant, 2,100+ predictive via AnalyticsIQ); 400+ programmatic distribution platforms; available across all major addressable TV providers, DSPs, and social networks | Freshness: continuously updated from member cooperative of live transactional contributors; includes 1-month, 3-month, and 12-month purchase recency windows; real-time and batch CRM enrichment available | Depth: data assets span PurchaseCore (brand affinity across 30 verticals, spend levels, purchase cycles, in-market predictors from 175M+ credit/bank card transactions), PeopleCore (demographics, lifestyle, channel preferences, motivations and decision drivers powered by cognitive psychology), ProfessionalsCore (B2B decision-maker profiles linked to consumer identities), plus automotive (dealership/service records), TV viewership, CPG (9M+ consumers across 6,000 brands), political, social propensity (YouTube/TikTok/Twitch/Instagram/X/LinkedIn) | Signal strength: deterministic, PII-level construction from second-party cooperative member data; not modeled from panels or inferred from web behavior; Neutronian certified; SOC 2 certified; supports UID2, CTV IDs, MAIDs, postal, email, IP, and lat/long match keys | Products: Alliant Audiences (syndicated + custom), AnalyticsIQ Audiences powered by Alliant, DataHub (CRM enrichment + modeling), lookalike and response models | Use cases: prospecting, CRM enrichment, competitive conquest, CTV/programmatic/social activation, lookalike modeling, KPI-based custom audience development across retail, CPG, travel, finance, health & wellness, B2B | Differentiator: unique fusion of real-world purchase transactions with cognitive psychology (the 'why behind the buy'); independent cooperative structure (not reselling third-party data); validates audiences with Neutronian certification; single provider covering deterministic purchase + psychographic motivation + B2B identity in one ecosystem",
+      "tags": ["retail", "demographics", "financial", "interests"]
+    },
+    {
+      "id": "sovrn",
+      "name": "Sovrn Data Solutions",
+      "value_type": "binary",
+      "description": "Sovrn Data Solutions | Category: open-web behavioral data, commerce purchase intent signals, identity resolution, publisher-sourced audience data, attention and engagement signals | Scale: 500M+ daily active consumers, 30B+ daily page views, 50,000+ independent publisher and creator websites, 5,000+ affiliate commerce publishers driving $3B+ in annual retail spend across 50,000+ merchants; identity graph covers 256M email-to-cookie linkages/month, 500M MAU email-to-MAID linkages, 5B hashed email events/month; geographic coverage: US (200B page views/month), GDPR/Europe (60B consented), APAC (50B), LATAM (21B), Canada (20B) | Freshness: real-time affiliate click and purchase signals at point of content engagement; daily behavioral data refresh from publisher network; Signal product enriches bid requests in-flight with real-time attention scores, viewability, CTR predictions, floor pricing, and identity attributes | Depth: data types include web behavioral segments, commerce purchase intent (product-level affiliate click and buy signals across consumer electronics, home/garden, fashion/beauty, CPG), contextual categories (branded and unbranded taxonomy), identity attributes (HEM, MAID, cookie, IP), attention and engagement metrics (viewable engaged time, CTR prediction, viewability scores), demographic segments, and interest/intent categories; custom keyword audiences available; niche publisher verticals not available in walled garden or panel-based sources | Signal strength: first-party, directly sourced from publisher and affiliate network relationships — no intermediary data reselling, no third-party inference; commerce signals sourced from actual affiliate link clicks and confirmed purchases (not search queries or modeled intent); consented and privacy-compliant (GDPR, CCPA); cookieless-ready via HEM/MAID/UID2 identity spine | Products: Behavioral Data (web behavioral segments, custom datasets), Identity Solutions (email-to-cookie, email-to-MAID, HEM events, cookie sync/Reach), Audiences (branded, unbranded, custom keyword segments, Sovrn Network Deal IDs), Commerce Audiences (purchase intent from affiliate + programmatic signal fusion, launched April 2025), Signal (bid request enrichment with attention metrics, dynamic floor pricing, identity broadcast) | Activation: programmatic Deal ID via DSP seat, LiveRamp, direct data licensing, API, CTV (tvScientific), Simpli.fi, Basis Technologies | Use cases: audience targeting, CRM enrichment, identity mapping, omnichannel ID resolution, cybersecurity/fraud detection, attribution and measurement, market research, persona development, B2B targeting, publisher yield optimization | Differentiator: only open-web data provider combining endemic affiliate commerce purchase signals (what people actually buy) with broad behavioral engagement data (what they read and browse) — captures intent at the moment of content inspiration, not just at search or checkout; uniquely sourced from independent publisher ecosystem, delivering niche audiences unavailable in walled gardens or retail media networks; Signal product adds attention-based quality scoring to identity, making it the only dataset linking engagement quality to audience value in a single bid-stream-native product",
+      "tags": ["retail", "demographics", "interests"]
+    },
+    {
+      "id": "retail_transactions",
+      "name": "Retail Transaction Buyers",
+      "value_type": "binary",
+      "description": "Deterministic purchase-based audiences built from transaction-level retail data across grocery, CPG, and specialty categories",
+      "tags": ["retail"]
+    },
+    {
+      "id": "auto_intenders",
+      "name": "Auto Intenders",
+      "value_type": "binary",
+      "description": "In-market vehicle shoppers identified from browsing, search, and purchase signals",
+      "tags": ["auto"]
+    },
+    {
+      "id": "b2b_industry",
+      "name": "B2B Industry Segments",
+      "value_type": "categorical",
+      "description": "Business professionals segmented by industry vertical, company size, and decision-making role",
+      "tags": ["b2b"]
+    },
+    {
+      "id": "demographic_hh",
+      "name": "Demographic & Household",
+      "value_type": "categorical",
+      "description": "Age, income, household size, and life-stage segments",
+      "tags": ["demographics"]
+    },
+    {
+      "id": "financial_behavior",
+      "name": "Financial Behavior",
+      "value_type": "binary",
+      "description": "Banking relationships, investment behavior, insurance holders, and credit card usage",
+      "tags": ["financial"]
+    },
+    {
+      "id": "health_npi",
+      "name": "Healthcare Professionals",
+      "value_type": "binary",
+      "description": "Verified healthcare professionals by specialty, identified via NPI data",
+      "tags": ["health"]
+    },
+    {
+      "id": "travel_intent",
+      "name": "Travel Intent",
+      "value_type": "binary",
+      "description": "Domestic and international travelers identified from booking and search behavior",
+      "tags": ["travel"]
+    },
+    {
+      "id": "real_estate_activity",
+      "name": "Real Estate Activity",
+      "value_type": "categorical",
+      "description": "Home buyers, sellers, renters, and home improvement audiences",
+      "tags": ["real_estate"]
+    },
+    {
+      "id": "education_alumni",
+      "name": "Education & Alumni",
+      "value_type": "categorical",
+      "description": "University alumni networks and current student segments by institution",
+      "tags": ["education"]
+    },
+    {
+      "id": "sports_fan",
+      "name": "Sports Fans",
+      "value_type": "categorical",
+      "description": "Fans segmented by sport, team affiliation, and engagement level",
+      "tags": ["sports"]
+    }
+  ]
+}
