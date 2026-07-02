@@ -8,7 +8,7 @@
   },
   "authorized_agents": [
     {
-      "url": "https://above-data-signals-agent.fly.dev/mcp/",
+      "url": "https://signals.abovedata.info/mcp/",
       "authorized_for": "All Above Data signals",
       "authorization_type": "open"
     }
